@@ -1,24 +1,27 @@
-apply {
-	plugin 'java'
-	plugin 'groovy'
-	plugin 'idea'
-}
+apply plugin: 'groovy'
+apply plugin: 'idea'
+
+version = '1.0'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+[compileJava, compileTestJava, compileGroovy, compileTestGroovy].each { it.options.encoding = 'UTF-8' }
+[compileGroovy, compileTestGroovy].each { it.groovyOptions.encoding = 'UTF-8' }
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
-//dependencies {
-//	groovy ''
-// 	testCompile ''
-// }
+dependencies {
+    groovy 'org.codehaus.groovy:groovy-all:1.8.6'
+    testCompile 'org.spockframework:spock-core:0.6-groovy-1.8'
+}
 
+task quickStart << {
+    sourceSets*.allSource*.srcDirs.flatten().each { it.mkdirs() }
+}
 
-//task wrapper(type: wrapper) {
-//	gradleVersion '1.0'
-//}
-
-
-task quickStart {
-	// sourceSets, 
+task wrapper(type: Wrapper) {
+	gradleVersion = 1.1
 }
