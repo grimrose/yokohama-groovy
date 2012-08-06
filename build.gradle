@@ -1,0 +1,24 @@
+apply {
+	plugin 'java'
+	plugin 'groovy'
+	plugin 'idea'
+}
+
+repositories {
+	mavenCentral()
+}
+
+//dependencies {
+//	groovy ''
+// 	testCompile ''
+// }
+
+
+//task wrapper(type: wrapper) {
+//	gradleVersion '1.0'
+//}
+
+
+task quickStart {
+	// sourceSets, 
+}
