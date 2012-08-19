@@ -12,3 +12,5 @@ new File(args[0]).eachLine { a ->
 
 }
 
+map
+

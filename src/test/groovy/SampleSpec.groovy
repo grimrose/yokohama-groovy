@@ -1,9 +1,6 @@
 import spock.lang.Specification
 import spock.lang.Unroll
 
-import org.github.grimrose.sample.SampleAOP
-import org.github.grimrose.sample.SampleLogic
-
 /**
  * Created with IntelliJ IDEA.
  * User: grimrose
