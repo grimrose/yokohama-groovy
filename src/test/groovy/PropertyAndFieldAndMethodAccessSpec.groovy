@@ -31,4 +31,33 @@ class PropertyAndFieldAndMethodAccessSpec extends Specification {
         c.getProperty(fieldName) == 1
 
     }
+
+    class MyClass1 {
+        def method1() {
+            return "A"
+        }
+
+        def method2() {
+            return "B"
+        }
+
+        def method3() {
+            return "C"
+        }
+
+    }
+
+    def "using GString"() {
+        /* リスト3.18 GStringでメソッド名を指定する例 */
+        expect:
+        def c = new MyClass1()
+        c."method${i}"() == expect
+
+        where:
+        i | expect
+        1 | "A"
+        2 | "B"
+        3 | "C"
+    }
+
 }
