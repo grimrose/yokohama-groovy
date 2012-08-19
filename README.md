@@ -7,3 +7,8 @@
 # update
 
 2012-08-07 1st meeting
+
+* 第3章 プログラミング言語 groovy
+ * 3.2 ひとめぐり
+
+2012-08-20 2nd meeting
