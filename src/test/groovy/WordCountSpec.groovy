@@ -13,14 +13,14 @@ class WordCountSpec extends Specification {
 
         expect:
         def base = new File("")
-        println base.absolutePath
+//        println base.absolutePath
 
         GroovyShell shell = new GroovyShell()
 
         def script = shell.parse(new File(base.absolutePath, "src/main/groovy/wordCount.groovy"))
         script.setProperty("args", [ "${base.absolutePath}/src/main/resources/input.txt"])
 
-        def expect = [not: 2, it:2, That: 5, is: 6]
+        def expect = [That:1, not: 2, it:2, that: 4, is: 6]
         assert script.run() == expect
 
     }
