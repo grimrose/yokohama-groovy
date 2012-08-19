@@ -6,7 +6,7 @@
 
 
 # build.status
-![image](https://secure.travis-ci.org/grimrose/yokohama-groovy.png?branch=master)
+[![Build Status](https://secure.travis-ci.org/grimrose/yokohama-groovy.png?branch=master)](http://travis-ci.org/grimrose/yokohama-groovy)
 
 # update
 
@@ -16,3 +16,6 @@
  * 3.2 ひとめぐり
 
 2012-08-20 2nd meeting
+
+* 第3章 プログラミング言語 groovy
+ * 3.5 データ型
