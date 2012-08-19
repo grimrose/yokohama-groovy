@@ -1,6 +1,7 @@
 import spock.lang.Specification
 import javax.swing.JFrame
 import javax.swing.JButton
+import spock.lang.Ignore
 
 /**
  * Created with IntelliJ IDEA.
@@ -52,6 +53,7 @@ class GroovyBeansSpec extends Specification {
         System.env.PATH == System.getenv().get("PATH")
     }
 
+    @Ignore
     def "event "() {
         /* リスト3.16 イベント処理 */
         def frame = new JFrame()
