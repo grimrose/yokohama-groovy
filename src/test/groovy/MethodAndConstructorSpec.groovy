@@ -9,4 +9,14 @@ import spock.lang.Specification
  */
 class MethodAndConstructorSpec extends Specification {
 
+    def "MethodAndConstructor run"() {
+        when:
+        def base = new File("")
+        GroovyShell shell = new GroovyShell()
+        def script = shell.parse(new File(base.absolutePath, "src/main/groovy/MethodAndConstructor.groovy"))
+
+        then:
+        assert script.run() == null
+    }
+
 }
