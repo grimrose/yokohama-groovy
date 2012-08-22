@@ -1,5 +1,14 @@
-apply plugin: 'groovy'
-apply plugin: 'idea'
+/* language */
+apply {
+    plugin 'groovy'
+    plugin 'java'
+}
+
+/* ide */
+apply {
+    plugin 'idea'
+    plugin 'eclipse'
+}
 
 version = '1.0'
 
@@ -16,11 +25,6 @@ repositories {
 dependencies {
     groovy 'org.codehaus.groovy:groovy-all:1.8.6'
     testCompile 'org.spockframework:spock-core:0.6-groovy-1.8'
-
-    compile 'org.slf4j:slf4j-api:1.6.6'
-    runtime 'ch.qos.logback:logback-core:1.0.6'
-    runtime 'ch.qos.logback:logback-classic:1.0.6'
-
 }
 
 task quickStart << {
