@@ -15,8 +15,10 @@ version = '1.0'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
-[compileJava, compileTestJava, compileGroovy, compileTestGroovy].each { it.options.encoding = 'UTF-8' }
-[compileGroovy, compileTestGroovy].each { it.groovyOptions.encoding = 'UTF-8' }
+def encoding = 'UTF-8'
+
+[compileJava, compileTestJava, compileGroovy, compileTestGroovy].each { it.options.encoding = encoding }
+[compileGroovy, compileTestGroovy].each { it.groovyOptions.encoding = encoding }
 
 repositories {
     mavenCentral()
@@ -32,5 +34,5 @@ task quickStart << {
 }
 
 task wrapper(type: Wrapper) {
-	gradleVersion = 1.1
+    gradleVersion = 1.1
 }
